@@ -1,0 +1,33 @@
+# install modules
+node_modules
+typings
+yarn.lock
+yarn-debug.log*
+yarn-error.log*
+
+# mac
+.DS_Store
+
+# win
+desktop.ini
+npm-debug.log
+debug.log
+*.zip
+*.rar
+
+# ide
+.vs_code
+.vs_code/
+.idea
+.idea/
+*.project
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# build
+*.map
+
+# config
+jsconfig.json
