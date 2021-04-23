@@ -8,5 +8,9 @@ const index = (state=initialState, action)=>{
             return {
                 num: action.num
             }
+        default:
+            return state;
     }
 }
+
+export default index;
