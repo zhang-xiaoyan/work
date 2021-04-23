@@ -11,9 +11,8 @@ class Index extends Component {
 
     render() {
         const { num } = this.props;
-        console.log(this.props);
         return (
-            <div onClick={ this.add }>{ num }11</div>
+            <div onClick={ this.add }>{ num }</div>
         )
     }
 
@@ -27,8 +26,9 @@ class Index extends Component {
 }
 
 const select = (state) => {
+    let index = state.index;
     return {
-        num: state.num
+        num: index.num
     }
 }
 
