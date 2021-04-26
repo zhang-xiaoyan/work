@@ -13,6 +13,7 @@ module.exports =(env)=>{
             path: path.resolve(__dirname, 'dist/'),
             filename: 'js/[name].js'
         },
+        devtool: 'inline-source-map',
         plugins: [
             new HtmlWebpackPlugin({
                 filename: 'index.html',
@@ -25,6 +26,11 @@ module.exports =(env)=>{
                 {
                     test: /\.(jsx|js)?$/,
                     use: ['babel-loader'],
+                    exclude: /node_modules/
+                },
+                {
+                    test: /\.tsx?$/,
+                    use: 'ts-loader',
                     exclude: /node_modules/
                 },
                 {
@@ -52,7 +58,7 @@ module.exports =(env)=>{
             publicPath: '/'
         },
         resolve: {
-            extensions: ['.js', '.json', '.jsx'],
+            extensions: ['.js', '.json', '.jsx', '.tsx', '.ts'],
             alias: {
                 // '@assets': path.join(__dirname, '..', 'src/assets')
             }
