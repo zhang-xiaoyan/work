@@ -1,5 +1,7 @@
-import React, {Component, PureComponent} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+import TestTs from '../testTs/index';
 
 class Index extends Component {
     constructor(props) {
@@ -12,7 +14,10 @@ class Index extends Component {
     render() {
         const { num } = this.props;
         return (
-            <div onClick={ this.add }>{ num }</div>
+            <div onClick={ this.add }>
+                <div>测试 redux 的数据：{ num }</div>
+                <TestTs />
+            </div>
         )
     }
 

@@ -5,7 +5,8 @@ module.exports = {
                 "browsers": ["last 2 versions"] // 最近 2 个版本的浏览器
             }
         }],
-        "@babel/preset-react"
+        "@babel/preset-react",
+        "@babel/preset-typescript"
     ],
     "plugins": [
         ["syntax-jsx"],
