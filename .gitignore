@@ -19,7 +19,7 @@ debug.log
 .vs_code
 .vs_code/
 .idea
-.idea/
+# .idea/
 *.project
 *.suo
 *.ntvs*
