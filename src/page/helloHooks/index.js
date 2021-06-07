@@ -1,21 +1,41 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-function HelloHooks(props){
-    const [text, setText] = useState('初始文本');
-    const [list, setList] = useState([]);
-    function changeText() {
-        return setText('修改后的文本');
-    }
-    function changeList() {
-        return setList([1,2,3]);
-    }
-    return(
+function Child1(props) {
+    console.log('child1的props:', props);
+    const {num, handleClick} = props;
+    return (
+        <div onClick={() => handleClick(num + 1)}>child1</div>
+    )
+}
+
+function Child2(props) {
+    console.log('child2的props:', props);
+    const { text, handleClick } = props;
+    return (
         <div>
-            <p>文案:{text}</p>
-            <p>长度:{list.length}</p>
-            <button onClick={changeText}>{props.user}点击修改文本</button>
-            <button onClick={changeList}>点击修改数组</button>
+            child2
+            <Grandson text={text} handleClick={handleClick} />
+        </div>
+    );
+}
+
+function Grandson(props) {
+    console.log('Grandson的props:', props);
+    const { text, handleClick } = props;
+    return (
+        <div onClick={() => { handleClick(text + 1);}} >grandson</div>
+    );
+}
+
+function Parent() {
+    let [num, setNum] = useState(0);
+    let [text, setText] = useState(1);
+
+    return (
+        <div>
+            <Child1 num={num} handleClick={setNum}/>
+            <Child2 text={text} handleClick={setText}/>
         </div>
     );
 }
@@ -27,4 +47,4 @@ const select = (state) => {
     }
 }
 
-export default connect(select, null)(HelloHooks);
+export default connect(select, null)(Parent);

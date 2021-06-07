@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import TestTs from '../testTs/index';
 import HelloHooks from '../helloHooks/index';
 import HelloEffect from '../helloEffect/index';
+import Example from '../testMemo'
 
 class Index extends Component {
     constructor(props) {
@@ -20,7 +21,8 @@ class Index extends Component {
                 {/*<div>测试 redux 的数据：{ num }</div>*/}
                 {/*<TestTs />*/}
                 {/*<HelloHooks />*/}
-                <HelloEffect />
+                {/*<HelloEffect />*/}
+                <Example />
             </div>
         )
     }
