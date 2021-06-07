@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import TestTs from '../testTs/index';
 import HelloHooks from '../helloHooks/index';
 import HelloEffect from '../helloEffect/index';
-import Example from '../testMemo'
+import Example from '../testMemo';
+import { User } from '../first/index';
 
 class Index extends Component {
     constructor(props) {
@@ -22,7 +23,8 @@ class Index extends Component {
                 {/*<TestTs />*/}
                 {/*<HelloHooks />*/}
                 {/*<HelloEffect />*/}
-                <Example />
+                {/*<Example />*/}
+                <User name='first' age={25} />
             </div>
         )
     }
