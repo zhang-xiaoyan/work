@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Test from '../six/index';
+import Test from '../seven/index';
 
 class Index extends Component {
     constructor(props) {
