@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Counter from '../four/index';
+import Test from '../six/index';
 
 class Index extends Component {
     constructor(props) {
@@ -15,7 +15,7 @@ class Index extends Component {
         const { num } = this.props;
         return (
             <div onClick={ this.add }>
-                <Counter />
+                <Test />
             </div>
         )
     }
