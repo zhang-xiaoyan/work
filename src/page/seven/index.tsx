@@ -28,9 +28,14 @@ const Show:React.FC<Data> =({time, children})=> {
         return changeTime(time);
     }, [time]);
 
+    const getNewTime = React.useCallback(() => {
+        return changeTime(time);
+    }, [time]);
+
     return(
         <div>
             <p>Time is: { newTime }</p>
+            <p>getNewTime is: { getNewTime() }</p>
             <p>Random is: { children }</p>
         </div>
     )
